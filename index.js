@@ -1,5 +1,5 @@
 module.exports = function (arr) {
-  let counts = {}
+  var counts = {}
 
   arr.forEach(value => {
     if (typeof value !== 'string') return
