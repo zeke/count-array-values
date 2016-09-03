@@ -1,0 +1,26 @@
+{
+  "name": "count-array-values",
+  "version": "1.0.0",
+  "description": "Count the instances of each value in an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | tap-spec && standard && standard-markdown"
+  },
+  "repository": "https://github.com/zeke/count-array-values",
+  "keywords": [
+    "array",
+    "count",
+    "score",
+    "frequency",
+    "total",
+    "tally"
+  ],
+  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^8.0.0",
+    "standard-markdown": "^1.2.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
