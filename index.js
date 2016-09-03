@@ -1,12 +1,12 @@
 module.exports = function (arr) {
   var counts = {}
 
-  arr.forEach(value => {
+  arr.forEach(function (value) {
     if (typeof value !== 'string') return
     counts[value] ? counts[value]++ : counts[value] = 1
   })
 
   return Object.keys(counts)
-    .map(key => { return {value: key, count: counts[key]} })
-    .sort((a, b) => b.count - a.count)
+    .map(function (key) { return {value: key, count: counts[key]} })
+    .sort(function (a, b) { return b.count - a.count })
 }
