@@ -1,5 +1,5 @@
 var test = require('tape')
-var countArrayValues = require('.')
+var countArrayValues = require('./')
 
 var input = ['foo', 'bar', 'Bar', 451, 'bar', 'bar', 'baz', 'foo', null, undefined]
 var output = [
