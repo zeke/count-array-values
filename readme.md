@@ -1,4 +1,4 @@
-# count-array-values
+# count-array-values  [![Build Status](https://travis-ci.org/zeke/count-array-values.svg?branch=master)](https://travis-ci.org/zeke/count-array-values)
 
 Count the instances of each value in an array, ignoring any non-string values.
 
