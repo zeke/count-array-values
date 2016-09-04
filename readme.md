@@ -22,6 +22,18 @@ count(['foo', 'bar', 'Bar', 451, 'bar', 'bar', 'baz', 'foo', null, undefined])
 // ]
 ```
 
+If you'd like to use a more relevant property name than `value`, specify it
+as the second argument when calling the function:
+
+```js
+count(['apple', 'banana', 'apple'], 'fruit')
+
+// [
+//   {fruit: 'apple', count: 2},
+//   {fruit: 'banana', count: 1}
+// ]
+```
+
 ## Tests
 
 ```sh
