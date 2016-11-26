@@ -16,7 +16,15 @@ test('countArrayValues', function (t) {
     {fruit: 'apple', count: 2},
     {fruit: 'banana', count: 1}
   ]
-  t.deepEqual(countArrayValues(input, 'fruit'), output, 'allows a custom property name to be set')
+  t.deepEqual(countArrayValues(input, 'fruit'), output, 'allows a custom property to be set for name')
+
+  input = ['express', 'lodash', 'express', 'lodash', 'express', 'banana']
+  output = [
+    {package: 'express', dependents: 3},
+    {package: 'lodash', dependents: 2},
+    {package: 'banana', dependents: 1}
+  ]
+  t.deepEqual(countArrayValues(input, 'package', 'dependents'), output, 'allows a custom property to be set for count')
 
   t.end()
 })

@@ -34,6 +34,19 @@ count(['apple', 'banana', 'apple'], 'fruit')
 // ]
 ```
 
+You can also override the name of the `count` property:
+
+```js
+const packages = ['express', 'lodash', 'express', 'lodash', 'express', 'banana']
+count(packages, 'package', 'dependents')
+
+// [
+//   {package: 'express', dependents: 3},
+//   {package: 'lodash', dependents: 2},
+//   {package: 'banana', dependents: 1}
+// ]
+```
+
 ## Tests
 
 ```sh

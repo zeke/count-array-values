@@ -1,6 +1,7 @@
-module.exports = function (arr, label) {
+module.exports = function (arr, nameLabel, countLabel) {
   var counts = {}
-  label = label || 'value'
+  nameLabel = nameLabel || 'value'
+  countLabel = countLabel || 'count'
 
   arr.forEach(function (value) {
     if (typeof value !== 'string') return
@@ -10,8 +11,8 @@ module.exports = function (arr, label) {
   return Object.keys(counts)
     .map(function (key) {
       var obj = {}
-      obj[label] = key
-      obj.count = counts[key]
+      obj[nameLabel] = key
+      obj[countLabel] = counts[key]
       return obj
     })
     .sort(function (a, b) { return b.count - a.count })
