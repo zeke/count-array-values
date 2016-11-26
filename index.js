@@ -15,5 +15,5 @@ module.exports = function (arr, nameLabel, countLabel) {
       obj[countLabel] = counts[key]
       return obj
     })
-    .sort(function (a, b) { return b.count - a.count })
+    .sort(function (a, b) { return b[countLabel] - a[countLabel] })
 }
