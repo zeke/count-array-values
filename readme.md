@@ -10,8 +10,10 @@ npm install count-array-values --save
 
 ## Usage
 
+The exported function returns a sorted array:
+
 ```js
-var count = require('count-array-values')
+const count = require('count-array-values')
 count(['foo', 'bar', 'Bar', 451, 'bar', 'bar', 'baz', 'foo', null, undefined])
 
 // [
@@ -45,6 +47,24 @@ count(packages, 'package', 'dependents')
 //   {package: 'lodash', dependents: 2},
 //   {package: 'banana', dependents: 1}
 // ]
+```
+
+## FAQ
+
+#### Returning an object would be better. Why an array?
+
+An array is returned instead of
+a key-value object because objects can't properly be sorted if any of their
+keys have numerical string values such as
+['1999'](https://www.npmjs.com/~1999).
+
+If you want an object instead, just do this:
+
+```js
+const count = require('count-array-values')
+const packages = ['express', 'lodash', 'express', 'lodash', 'express', 'banana']
+const obj = {}
+count(packages, 'k', 'v').map(_ => obj[_.k] = _.v)
 ```
 
 ## Tests
